@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rev Claw | Host a claw machine, earn a monthly payment</title>
+<meta name="description" content="Rev Claw places trend driven claw machines in local businesses. Fixed monthly payment, full installation and upkeep, and a free local search consultation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#f6edd3;
+  --cream-2:#efe3c0;
+  --blue:#2f4f91;
+  --blue-dark:#22396b;
+  --sky:#a9b9e0;
+  --yellow:#f2c230;
+  --ink:#22396b;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:Outfit,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.55;font-size:18px}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+
+header{padding:20px 0}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-size:30px;line-height:1}
+.logo .rev{font-family:"Dancing Script",cursive;font-weight:600}
+.logo .claw{font-weight:700;letter-spacing:.02em}
+.logo svg{width:30px;height:30px}
+.btn{display:inline-block;background:var(--blue);color:var(--cream);text-decoration:none;font-weight:600;padding:14px 26px;border-radius:999px;border:2px solid var(--blue);transition:background .15s,color .15s}
+.btn:hover{background:var(--blue-dark)}
+.btn.ghost{background:transparent;color:var(--blue)}
+.btn.ghost:hover{background:var(--blue);color:var(--cream)}
+header .btn{padding:10px 20px;font-size:16px}
+
+.hero{padding:40px 0 72px}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+h1{font-size:clamp(40px,6.2vw,68px);line-height:1.02;margin:0 0 20px;font-weight:700;letter-spacing:-.02em}
+.hero p{font-size:21px;max-width:30em;margin:0 0 28px}
+.hero .actions{display:flex;flex-wrap:wrap;gap:12px}
+.machine{justify-self:center;width:100%;max-width:340px;position:relative}
+.machine svg{width:100%;height:auto;display:block}
+.burst{position:absolute;left:-28px;bottom:14px;width:150px;transform:rotate(-8deg)}
+.burst svg{width:100%}
+.burst span{position:absolute;inset:0;display:grid;place-items:center;text-align:center;font-weight:700;font-size:13px;line-height:1.25;color:var(--blue-dark);padding:0 26px}
+
+.benefits{background:var(--cream-2);padding:72px 0}
+h2{font-size:clamp(30px,4.2vw,42px);line-height:1.1;margin:0 0 12px;letter-spacing:-.01em}
+.lead{margin:0 0 40px;max-width:36em;opacity:.9}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.card{background:var(--cream);border:2px solid var(--blue);border-radius:18px;padding:28px}
+.card h3{margin:0 0 8px;font-size:23px}
+.card p{margin:0}
+
+.steps{padding:72px 0}
+.steps ol{list-style:none;counter-reset:s;padding:0;margin:0;display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.steps li{counter-increment:s}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--blue);color:var(--cream);font-weight:700;margin-bottom:14px}
+.steps h3{margin:0 0 6px;font-size:21px}
+.steps p{margin:0}
+
+.cta{background:var(--blue);color:var(--cream);padding:72px 0;text-align:center}
+.cta h2{color:var(--cream)}
+.cta p{max-width:32em;margin:0 auto 28px}
+.cta .btn{background:var(--yellow);border-color:var(--yellow);color:var(--blue-dark)}
+.cta .btn:hover{background:#ffd24d}
+.cta .btn.ghost{background:transparent;color:var(--cream);border-color:var(--cream)}
+.cta .btn.ghost:hover{background:var(--cream);color:var(--blue-dark)}
+.cta .actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+
+footer{padding:28px 0;font-size:15px;text-align:center}
+
+@media (max-width:820px){
+  .hero .wrap{grid-template-columns:1fr}
+  .machine{max-width:280px;order:-1;margin-bottom:8px}
+  .grid,.steps ol{grid-template-columns:1fr}
+  body{font-size:17px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Rev Claw home">
+      <span class="rev">Rev</span><span class="claw">CLAW</span>
+      <svg viewBox="0 0 40 40" aria-hidden="true"><path fill="#2f4f91" d="M20 0l4 12 11-6-6 11 12 3-12 4 6 11-11-6-4 12-4-12-11 6 6-11L1 20l12-3-6-11 11 6z"/></svg>
+    </a>
+    <a class="btn" href="#contact">Get in touch</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <h1>Win everytime claw machine</h1>
+        <p>Host our trend driven claw machine at your business and earn a monthly payment. We handle the rest.</p>
+        <div class="actions">
+          <a class="btn" href="mailto:contact@rev-claw.com?subject=Hosting%20a%20Rev%20Claw%20machine">Become a host</a>
+          <a class="btn ghost" href="mailto:contact@rev-claw.com?subject=Newsletter%20signup">Subscribe to our newsletter</a>
+        </div>
+      </div>
+      <div class="machine">
+        <svg viewBox="0 0 260 420" role="img" aria-label="Illustration of a blue claw machine">
+          <rect x="30" y="10" width="200" height="400" rx="22" fill="#2f4f91"/>
+          <rect x="48" y="60" width="164" height="210" rx="10" fill="#f6edd3"/>
+          <rect x="48" y="60" width="164" height="210" rx="10" fill="#a9b9e0" opacity=".35"/>
+          <rect x="60" y="24" width="140" height="26" rx="8" fill="#a9b9e0"/>
+          <path d="M130 60v70" stroke="#2f4f91" stroke-width="4"/>
+          <path d="M112 130q18-14 36 0" fill="none" stroke="#2f4f91" stroke-width="5" stroke-linecap="round"/>
+          <path d="M112 130l-8 22M148 130l8 22M130 130v26" stroke="#2f4f91" stroke-width="5" stroke-linecap="round"/>
+          <g fill="#f2c230"><circle cx="82" cy="244" r="17"/><circle cx="118" cy="248" r="15"/><circle cx="152" cy="242" r="18"/><circle cx="188" cy="248" r="15"/><circle cx="100" cy="222" r="14"/><circle cx="170" cy="220" r="14"/></g>
+          <g fill="#f6edd3"><circle cx="78" cy="240" r="3"/><circle cx="114" cy="244" r="3"/><circle cx="148" cy="238" r="3"/><circle cx="184" cy="244" r="3"/></g>
+          <rect x="48" y="290" width="164" height="60" rx="10" fill="#22396b"/>
+          <circle cx="90" cy="320" r="13" fill="#f2c230"/>
+          <rect x="130" y="312" width="66" height="16" rx="8" fill="#a9b9e0"/>
+          <rect x="88" y="366" width="84" height="30" rx="6" fill="#22396b"/>
+        </svg>
+        <div class="burst" aria-hidden="true">
+          <svg viewBox="0 0 100 100"><path fill="#a9b9e0" d="M50 2l8 20 18-12-4 22 22 2-17 14 15 16-22-1 2 22-17-14-9 20-9-20-17 14 2-22-22 1 15-16L2 34l22-2-4-22 18 12z"/></svg>
+          <span>Endless tries.<br>No cries.<br>Win everytime.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="benefits" id="benefits">
+    <div class="wrap">
+      <h2>What you get as a host</h2>
+      <p class="lead">A simple way to add foot traffic and extra income, without adding work for your team.</p>
+      <div class="grid">
+        <div class="card">
+          <h3>Revenue driving traffic</h3>
+          <p>Our machine attracts young customers and parents, with social momentum driving retention.</p>
+        </div>
+        <div class="card">
+          <h3>Risk-Free Revenue</h3>
+          <p>A fixed monthly payment for hosting our machine. Details available upon request.</p>
+        </div>
+        <div class="card">
+          <h3>Full operational support</h3>
+          <p>Fully managed. We handle installation, inventory and maintenance.</p>
+        </div>
+        <div class="card">
+          <h3>Local search boost</h3>
+          <p>Complimentary consultation and profile update to improve your local search visibility.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="steps" id="how">
+    <div class="wrap">
+      <h2>How it works</h2>
+      <p class="lead">Three steps, and only the first one needs anything from you.</p>
+      <ol>
+        <li><h3>Say hello</h3><p>Reach out by phone or email and tell us about your space.</p></li>
+        <li><h3>We install</h3><p>We set up the machine, stock it and get it running.</p></li>
+        <li><h3>You get paid</h3><p>Receive your fixed monthly payment while we keep it stocked and maintained.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="cta" id="contact">
+    <div class="wrap">
+      <h2>Ready to host a Rev Claw?</h2>
+      <p>Tell us about your business and we will follow up with details on your monthly payment.</p>
+      <div class="actions">
+        <a class="btn" href="mailto:contact@rev-claw.com?subject=Hosting%20a%20Rev%20Claw%20machine">contact@rev-claw.com</a>
+        <a class="btn ghost" href="mailto:contact@rev-claw.com?subject=Newsletter%20signup">Subscribe to our newsletter</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">&copy; <span id="y">2026</span> Rev Claw. Partnership series.</div>
+</footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
